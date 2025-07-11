@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>One Over Cricket Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏏 One Over Cricket</h1>
+
+    <div id="setup">
+      <input type="text" id="playerName" placeholder="Enter Player Name" />
+      <select id="overs">
+        <option value="1">1 Over</option>
+        <option value="2">2 Overs</option>
+        <option value="3">3 Overs</option>
+        <option value="4">4 Overs</option>
+        <option value="5">5 Overs</option>
+      </select>
+      <select id="difficulty">
+        <option value="4">Easy</option>
+        <option value="5">Medium</option>
+        <option value="6">Hard</option>
+      </select>
+      <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game" class="hidden">
+      <p id="status"></p>
+      <input type="number" id="shotInput" min="0" max="6" placeholder="Enter shot (0–6)" />
+      <button onclick="playBall()">Play Ball</button>
+      <ul id="log"></ul>
+    </div>
+
+    <div id="summary" class="hidden">
+      <h3>📋 Game Summary</h3>
+      <p id="finalStats"></p>
+      <button onclick="location.reload()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
